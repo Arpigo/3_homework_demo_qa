@@ -11,18 +11,17 @@ public class TextBoxTests {
     static void setUp(){
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
     }
 
     @Test
-    void fillFormTest(){
-    open("/text-box");
+    void FormTest() {
+        open("/text-box");
 
-    $("[id=userName]").setValue("Egor");
-    $("[id=userEmail]").setValue("egorm@mail.ru");
-    $("[id=currentAddress]").setValue("Russia");
-    $("[id=permanentAddress]").setValue("Velikij Novgorod");
-    $("[id=submit]").click();
+        $("[id=userName]").setValue("Egor");
+        $("[id=userEmail]").setValue("egorm@mail.ru");
+        $("[id=currentAddress]").setValue("Russia");
+        $("[id=permanentAddress]").setValue("Velikij Novgorod");
+        $("[id=submit]").click();
 
     }
 
