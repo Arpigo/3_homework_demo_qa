@@ -28,9 +28,7 @@ public class TextBoxTests {
         $(".custom-radio:nth-child(1) > .custom-control-label").click();
         $("#userNumber").setValue("88005553535");
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").click();
         $(".react-datepicker__month-select").selectOption("July");
-        $(".react-datepicker__year-select").click();
         $(".react-datepicker__year-select").selectOption("1994");
         $(".react-datepicker__day--020").click();
         $(".subjects-auto-complete__value-container").click();
@@ -40,6 +38,7 @@ public class TextBoxTests {
         $("#subjectsInput").sendKeys(Keys.ENTER);
         $(".custom-checkbox:nth-child(1) > .custom-control-label").click();
         $(".custom-checkbox:nth-child(2) > .custom-control-label").click();
+        $("#uploadPicture").uploadFromClasspath("Image/img.jpg");
         $("#currentAddress").val("My street");
         $("#state").click();
         $("#react-select-3-option-1").click();
