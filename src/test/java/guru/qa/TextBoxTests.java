@@ -3,10 +3,8 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class TextBoxTests {
 
@@ -18,7 +16,7 @@ public class TextBoxTests {
     }
 
     @Test
-    void FormTest() {
+    void formTest() {
 
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
@@ -38,7 +36,7 @@ public class TextBoxTests {
         $("#subjectsInput").sendKeys(Keys.ENTER);
         $(".custom-checkbox:nth-child(1) > .custom-control-label").click();
         $(".custom-checkbox:nth-child(2) > .custom-control-label").click();
-        $("#uploadPicture").uploadFromClasspath("Image/img.jpg");
+        $("#uploadPicture").uploadFromClasspath("image/img.jpg");
         $("#currentAddress").val("My street");
         $("#state").click();
         $("#react-select-3-option-1").click();
